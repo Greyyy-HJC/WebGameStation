@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI 五子棋 · WebGameStation</title>
+    <meta
+      name="description"
+      content="在 WebGameStation 上体验 AI 五子棋，与智能电脑对手展开博弈，支持多难度和策略切换。"
+    />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/home.css" />
+    <link rel="stylesheet" href="../../styles/game-detail.css" />
+  </head>
+  <body>
+    <div class="game-app">
+      <a class="crumbs" href="../../">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="16" height="16">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="m15 19-7-7 7-7" />
+        </svg>
+        返回首页
+      </a>
+
+      <header class="game-hero">
+        <div class="game-tags">
+          <span class="game-tag">策略</span>
+          <span class="game-tag">AI 对战</span>
+          <span class="game-tag">双人模式</span>
+        </div>
+        <h1>AI 五子棋</h1>
+        <p>
+          与智能电脑对手展开随时随地的五子棋对战。支持调整 AI 策略、难度与禁手规则，界面延续 Apple 风格设计，适合从新手到高手的所有玩家。
+        </p>
+        <div class="game-meta">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 18v4m7-16-3 16H8L5 6" />
+            </svg>
+            纯前端运行
+          </span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 15.5a6.75 6.75 0 1 0 0-13.5 6.75 6.75 0 0 0 0 13.5Zm0 0V22" />
+            </svg>
+            GitHub Pages 托管
+          </span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M13.5 5.5 12 7l-1.5-1.5M12 7v6" />
+            </svg>
+            支持深度学习评估
+          </span>
+        </div>
+      </header>
+
+      <section class="game-panel">
+        <div class="game-actions">
+          <a class="button button-primary" href="https://jinchen.space/Web_Gobang/" target="_blank" rel="noreferrer noopener">
+            在新标签页游玩
+          </a>
+          <a class="button button-ghost" href="https://github.com/Greyyy-HJC/Web_Gobang" target="_blank" rel="noreferrer noopener">
+            查看源码
+          </a>
+        </div>
+
+        <p>
+          当前版本通过 iframe 引用外部托管的 AI 五子棋。后续将把核心游戏文件迁移到本仓库的
+          `games/ai-gobang/` 中，以支持离线运行及自定义主题。
+        </p>
+
+        <div class="iframe-wrapper">
+          <iframe src="https://jinchen.space/Web_Gobang/" title="AI 五子棋" loading="lazy"></iframe>
+        </div>
+
+        <p>
+          如果无法在 iframe 中加载，请点击「在新标签页游玩」按钮。建议使用最新版 Safari、
+          Chrome 或 Edge 浏览器以获得最佳体验。
+        </p>
+      </section>
+
+      <footer class="game-footer">
+        © <span id="game-year"></span> WebGameStation · AI 五子棋。界面与交互灵感来自 Apple 平台设计语言。
+      </footer>
+    </div>
+
+    <script>
+      const year = new Date().getFullYear();
+      document.getElementById('game-year').textContent = year;
+    </script>
+  </body>
+</html>

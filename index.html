@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebGameStation · 静态网页游戏平台</title>
+    <meta
+      name="description"
+      content="WebGameStation 是一个采用 iOS 风格 UI 的静态网页游戏平台，汇集可在浏览器中直接游玩的小游戏。"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="site-brand" href="/">
+          <span class="site-brand-icon">WG</span>
+          <span class="site-brand-text">
+            <span>Playground</span>
+            <span>WebGameStation</span>
+          </span>
+        </a>
+
+        <div class="site-actions">
+          <button class="lang-toggle" type="button" aria-label="切换中文与英文界面" data-i18n-key="controls.toggle">
+            中 / EN
+          </button>
+          <nav class="site-links" aria-label="作者链接" data-i18n-key="nav.links">
+            <a
+              class="icon-link"
+              href="https://jinchen.space"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="作者主页"
+              data-i18n-key="nav.author"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m-8.5 9h17"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a
+              class="icon-link"
+              href="https://github.com/Greyyy-HJC/WebGameStation"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="GitHub 仓库"
+              data-i18n-key="nav.repo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M15 22v-2.87a3.37 3.37 0 0 0-.94-2.6c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19.5 5.5 5.08 5.08 0 0 0 19.4 2s-1.18-.35-3.9 1.48a13.38 13.38 0 0 0-7 0C5.78 1.65 4.6 2 4.6 2a5.08 5.08 0 0 0-.1 3.5A5.44 5.44 0 0 0 3.5 9.5c0 5.43 3.3 6.62 6.44 7a3.37 3.37 0 0 0-.94 2.6V22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <span class="hero-badge" data-i18n-key="hero.badge">正在呈现</span>
+          <h1 class="hero-title" data-i18n-key="hero.title">Don't worry. Be happy!</h1>
+          <p class="hero-description" data-i18n-key="hero.description">
+            WebGameStation 收录了一系列可以直接在浏览器畅玩的小游戏，所有内容均以纯静态形式托管在 GitHub Pages。
+            现在就探索我们的精选游戏，感受即开即玩的轻盈体验。
+          </p>
+        </section>
+
+        <section id="games" class="game-section">
+          <div class="section-heading">
+            <h2 data-i18n-key="games.heading">精选游戏</h2>
+            <p data-i18n-key="games.subheading">首批上线的 AI 五子棋已经就绪，更多游戏即将加入。</p>
+          </div>
+
+          <div class="card-grid">
+            <article class="game-card">
+              <div class="card-header">
+                <span class="card-status" data-i18n-key="games.ai.status">上线</span>
+                <div class="card-tags">
+                  <span class="card-tag" data-i18n-key="games.ai.tags.strategy">策略</span>
+                  <span class="card-tag" data-i18n-key="games.ai.tags.ai">AI 对战</span>
+                  <span class="card-tag" data-i18n-key="games.ai.tags.gomoku">五子棋</span>
+                </div>
+              </div>
+
+              <div class="card-media" aria-hidden="true">
+                <span>AI ✦</span>
+              </div>
+
+              <div class="card-body">
+                <h3 data-i18n-key="games.ai.title">AI 五子棋</h3>
+                <p data-i18n-key="games.ai.description">
+                  与智能对手即刻博弈，支持多种策略和难度调节，适合想要快速开局的棋迷。界面延续细腻的动效与视觉设计，提供流畅的操作反馈。
+                </p>
+                <div class="card-meta">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M5 12h14m0 0-5-5m5 5-5 5" />
+                    </svg>
+                    <span data-i18n-key="games.ai.meta.instant">即开即玩</span>
+                  </span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 15.5a6.75 6.75 0 1 0 0-13.5 6.75 6.75 0 0 0 0 13.5Zm0 0V22" />
+                    </svg>
+                    <span data-i18n-key="games.ai.meta.hosting">GitHub Pages 托管</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <a
+                  class="button button-primary"
+                  href="https://jinchen.space/Web_Gobang/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  data-i18n-key="games.ai.actions.play"
+                >
+                  立即游玩
+                </a>
+                <a class="button button-ghost" href="games/ai-gobang/" data-i18n-key="games.ai.actions.more">了解详情</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        © <span id="copyright-year"></span> <span data-i18n-key="footer.tagline">WebGameStation · 静态网页的游戏乐园。</span>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const year = new Date().getFullYear();
+        document.getElementById('copyright-year').textContent = year;
+
+        const translations = {
+          zh: {
+            'controls.toggle': {
+              text: '中 / EN',
+              attrs: {
+                'aria-label': '切换中文与英文界面',
+                title: '切换中文与英文界面',
+              },
+            },
+            'nav.links': {
+              attrs: {
+                'aria-label': '作者链接',
+              },
+            },
+            'nav.author': {
+              attrs: {
+                'aria-label': '作者主页',
+                title: '作者主页',
+              },
+            },
+            'nav.repo': {
+              attrs: {
+                'aria-label': 'GitHub 仓库',
+                title: 'GitHub 仓库',
+              },
+            },
+            'hero.badge': '正在呈现',
+            'hero.title': "Don't worry. Be happy!",
+            'hero.description':
+              'WebGameStation 收录了一系列可以直接在浏览器畅玩的小游戏，所有内容均以纯静态形式托管在 GitHub Pages。现在就探索我们的精选游戏，感受即开即玩的轻盈体验。',
+            'games.heading': '精选游戏',
+            'games.subheading': '首批上线的 AI 五子棋已经就绪，更多游戏即将加入。',
+            'games.ai.status': '上线',
+            'games.ai.tags.strategy': '策略',
+            'games.ai.tags.ai': 'AI 对战',
+            'games.ai.tags.gomoku': '五子棋',
+            'games.ai.title': 'AI 五子棋',
+            'games.ai.description':
+              '与智能对手即刻博弈，支持多种策略和难度调节，适合想要快速开局的棋迷。界面延续细腻的动效与视觉设计，提供流畅的操作反馈。',
+            'games.ai.meta.instant': '即开即玩',
+            'games.ai.meta.hosting': 'GitHub Pages 托管',
+            'games.ai.actions.play': '立即游玩',
+            'games.ai.actions.more': '了解详情',
+            'footer.tagline': 'WebGameStation · 静态网页的游戏乐园。',
+          },
+          en: {
+            'controls.toggle': {
+              text: 'EN / 中',
+              attrs: {
+                'aria-label': 'Toggle English and Chinese interface',
+                title: 'Toggle English and Chinese interface',
+              },
+            },
+            'nav.author': {
+              attrs: {
+                'aria-label': 'Author homepage',
+                title: 'Author homepage',
+              },
+            },
+            'nav.repo': {
+              attrs: {
+                'aria-label': 'GitHub repository',
+                title: 'GitHub repository',
+              },
+            },
+            'nav.links': {
+              attrs: {
+                'aria-label': 'Author links',
+              },
+            },
+            'hero.badge': 'Now Playing',
+            'hero.title': "Don't worry. Be happy!",
+            'hero.description':
+              'WebGameStation curates a collection of instant-play browser games, hosted entirely as static assets on GitHub Pages. Jump in now and enjoy delightful, lightweight fun.',
+            'games.heading': 'Featured Games',
+            'games.subheading': 'AI Gomoku is ready to play today, with more titles on the way.',
+            'games.ai.status': 'Live',
+            'games.ai.tags.strategy': 'Strategy',
+            'games.ai.tags.ai': 'AI Battle',
+            'games.ai.tags.gomoku': 'Gomoku',
+            'games.ai.title': 'AI Gomoku',
+            'games.ai.description':
+              'Challenge an intelligent opponent with adjustable strategies and difficulty. A polished presentation keeps every move smooth and responsive.',
+            'games.ai.meta.instant': 'Play instantly',
+            'games.ai.meta.hosting': 'Hosted on GitHub Pages',
+            'games.ai.actions.play': 'Play now',
+            'games.ai.actions.more': 'Learn more',
+            'footer.tagline': 'WebGameStation · Crafted for static web fun.',
+          },
+        };
+
+        const storageKey = 'webgamestation-lang';
+        let currentLang = 'zh';
+
+        try {
+          const stored = localStorage.getItem(storageKey);
+          if (stored && translations[stored]) {
+            currentLang = stored;
+          }
+        } catch (error) {
+          currentLang = 'zh';
+        }
+
+        const toggleButton = document.querySelector('.lang-toggle');
+
+        function applyTranslations(lang) {
+          const langPack = translations[lang] || translations.zh;
+
+          document.querySelectorAll('[data-i18n-key]').forEach((el) => {
+            const key = el.dataset.i18nKey;
+            const value = langPack[key];
+            if (!value) {
+              return;
+            }
+
+            if (typeof value === 'string') {
+              el.textContent = value;
+              return;
+            }
+
+            if (typeof value === 'object') {
+              if (value.text !== undefined) {
+                el.textContent = value.text;
+              }
+              if (value.html !== undefined) {
+                el.innerHTML = value.html;
+              }
+              if (value.attrs) {
+                Object.entries(value.attrs).forEach(([attr, attrValue]) => {
+                  el.setAttribute(attr, attrValue);
+                });
+              }
+            }
+          });
+
+          document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'zh-CN');
+
+          if (toggleButton) {
+            toggleButton.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+          }
+        }
+
+        applyTranslations(currentLang);
+
+        if (toggleButton) {
+          toggleButton.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            applyTranslations(currentLang);
+            try {
+              localStorage.setItem(storageKey, currentLang);
+            } catch (error) {
+              // Ignore storage errors (private mode, etc.)
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
