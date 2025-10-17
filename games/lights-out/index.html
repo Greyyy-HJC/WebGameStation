@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>极光灯阵 · WebGameStation</title>
+    <meta
+      name="description"
+      content="在 WebGameStation 上体验极光灯阵，点击翻转灯面解开 5×5 灯阵谜题的轻量解谜小游戏。"
+    />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/home.css" />
+    <link rel="stylesheet" href="../../styles/game-detail.css" />
+    <link rel="stylesheet" href="./lights-out.css" />
+  </head>
+  <body>
+    <div class="game-app">
+      <div class="game-topbar">
+        <a class="crumbs" href="../../" data-i18n-key="crumbs.home">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="16" height="16">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="m15 19-7-7 7-7" />
+          </svg>
+          返回首页
+        </a>
+        <div class="game-top-actions">
+          <button class="lang-toggle" type="button" aria-label="切换中文与英文界面" data-i18n-key="controls.toggle">
+            中 / EN
+          </button>
+          <nav class="site-links" aria-label="作者链接" data-i18n-key="nav.links">
+            <a
+              class="icon-link"
+              href="https://jinchen.space"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="作者主页"
+              data-i18n-key="nav.author"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m-8.5 9h17"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a
+              class="icon-link"
+              href="https://github.com/Greyyy-HJC/WebGameStation"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="GitHub 仓库"
+              data-i18n-key="nav.repo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M15 22v-2.87a3.37 3.37 0 0 0-.94-2.6c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19.5 5.5 5.08 5.08 0 0 0 19.4 2s-1.18-.35-3.9 1.48a13.38 13.38 0 0 0-7 0C5.78 1.65 4.6 2 4.6 2a5.08 5.08 0 0 0-.1 3.5A5.44 5.44 0 0 0 3.5 9.5c0 5.43 3.3 6.62 6.44 7a3.37 3.37 0 0 0-.94 2.6V22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <header class="game-hero">
+        <div class="game-tags">
+          <span class="game-tag" data-i18n-key="hero.tags.puzzle">益智</span>
+          <span class="game-tag" data-i18n-key="hero.tags.logic">逻辑</span>
+          <span class="game-tag" data-i18n-key="hero.tags.relax">舒压</span>
+        </div>
+        <h1 data-i18n-key="hero.title">极光灯阵</h1>
+        <p data-i18n-key="hero.description">
+          点击棋盘翻转灯面，解开极光主题的 5×5 灯阵谜题。每一步都会影响相邻灯光，考验你的推理与节奏掌控。
+        </p>
+        <div class="game-meta">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 4h16v16H4z" />
+            </svg>
+            <span data-i18n-key="hero.meta.grid">5×5 灯阵</span>
+          </span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 6v6l4 2m5-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <span data-i18n-key="hero.meta.moves">统计步数</span>
+          </span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="m9 9 3 3 7-7" />
+            </svg>
+            <span data-i18n-key="hero.meta.undo">支持重置</span>
+          </span>
+        </div>
+      </header>
+
+      <section class="game-panel" id="play">
+        <div class="game-panel-header">
+          <h2 data-i18n-key="panel.heading">立即开局</h2>
+          <p data-i18n-key="panel.description">
+            点击任意灯面将其与上下左右相邻灯同时切换状态。让棋盘回归全暗即可获胜，试着用最少的步数解开谜题。
+          </p>
+        </div>
+
+        <div class="lights-layout">
+          <div class="lights-stage">
+            <div
+              id="lights-grid"
+              class="lights-grid"
+              role="grid"
+              aria-label="极光灯阵棋盘"
+              aria-describedby="lights-status"
+            ></div>
+            <p id="lights-status" class="lights-status" data-i18n-key="game.status.ready">
+              点击“开始新局”生成随机灯阵。
+            </p>
+          </div>
+          <aside class="lights-sidebar">
+            <div class="lights-scorecard">
+              <h3 data-i18n-key="scoreboard.heading">进度追踪</h3>
+              <div class="score-row">
+                <span data-i18n-key="panel.moves">步数</span>
+                <strong id="moves-value">0</strong>
+              </div>
+              <div class="score-row">
+                <span data-i18n-key="panel.best">最佳纪录</span>
+                <strong id="best-value">—</strong>
+              </div>
+            </div>
+            <div class="lights-buttons">
+              <button class="button button-primary" type="button" id="new-game-btn" data-i18n-key="controls.new">开始新局</button>
+              <button class="button button-ghost" type="button" id="reset-btn" data-i18n-key="controls.reset">重置灯面</button>
+            </div>
+            <p class="lights-note" data-i18n-key="panel.note">
+              提示：棋盘总能被解开。遇到卡关时可点击“重置灯面”恢复当前局面或重新开局。
+            </p>
+          </aside>
+        </div>
+
+        <div class="lights-rules" id="rules">
+          <h3 data-i18n-key="rules.heading">玩法说明</h3>
+          <ul>
+            <li data-i18n-key="rules.item1">每次点击会翻转目标灯与其上下左右相邻灯的状态。</li>
+            <li data-i18n-key="rules.item2">棋盘所有灯熄灭即达成胜利，可记录最少步数挑战自己。</li>
+            <li data-i18n-key="rules.item3">最佳纪录会保存在本地浏览器，可随时刷新或清空。</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="game-footer">
+        © <span id="game-year"></span>
+        <span data-i18n-key="footer.tagline">WebGameStation · 极光灯阵。</span>
+      </footer>
+    </div>
+
+    <script src="./lights-out.js"></script>
+  </body>
+</html>

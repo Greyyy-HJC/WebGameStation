@@ -82,7 +82,7 @@
         <section id="games" class="game-section">
           <div class="section-heading">
             <h2 data-i18n-key="games.heading">精选游戏</h2>
-            <p data-i18n-key="games.subheading">AI 五子棋与像素贪吃蛇已经就绪，更多游戏即将加入。</p>
+            <p data-i18n-key="games.subheading">AI 五子棋、像素贪吃蛇与极光灯阵已经就绪，更多游戏即将加入。</p>
           </div>
 
           <div class="card-grid">
@@ -182,6 +182,58 @@
                 </a>
               </div>
             </article>
+            <article class="game-card">
+              <div class="card-header">
+                <span class="card-status" data-i18n-key="games.lights.status">上线</span>
+                <div class="card-tags">
+                  <span class="card-tag" data-i18n-key="games.lights.tags.puzzle">益智</span>
+                  <span class="card-tag" data-i18n-key="games.lights.tags.logic">逻辑</span>
+                  <span class="card-tag" data-i18n-key="games.lights.tags.relax">舒压</span>
+                </div>
+              </div>
+
+              <div class="card-media card-media-amber" aria-hidden="true">
+                <span>✨</span>
+              </div>
+
+              <div class="card-body">
+                <h3 data-i18n-key="games.lights.title">极光灯阵</h3>
+                <p data-i18n-key="games.lights.description">
+                  点亮或熄灭极光灯面，规划每一步点击以清除整片棋盘。轻松上手，却暗藏推理挑战。
+                </p>
+                <div class="card-meta">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4.5 4.5h15v15h-15z" />
+                    </svg>
+                    <span data-i18n-key="games.lights.meta.grid">5×5 灯阵</span>
+                  </span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.6"
+                        d="M12 6v6l4 2m5-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                      />
+                    </svg>
+                    <span data-i18n-key="games.lights.meta.moves">记录步数</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <a class="button button-primary" href="games/lights-out/" data-i18n-key="games.lights.actions.play">立即游玩</a>
+                <a
+                  class="button button-ghost"
+                  href="games/lights-out/#rules"
+                  data-i18n-key="games.lights.actions.more"
+                >
+                  了解玩法
+                </a>
+              </div>
+            </article>
           </div>
         </section>
       </main>
@@ -227,7 +279,7 @@
             'hero.description':
               'WebGameStation 收录了一系列可以直接在浏览器畅玩的小游戏，所有内容均以纯静态形式托管在 GitHub Pages。现在就探索我们的精选游戏，感受即开即玩的轻盈体验。',
             'games.heading': '精选游戏',
-            'games.subheading': 'AI 五子棋与像素贪吃蛇已经就绪，更多游戏即将加入。',
+            'games.subheading': 'AI 五子棋、像素贪吃蛇与极光灯阵已经就绪，更多游戏即将加入。',
             'games.ai.status': '上线',
             'games.ai.tags.strategy': '策略',
             'games.ai.tags.ai': 'AI 对战',
@@ -250,6 +302,17 @@
             'games.snake.meta.controls': '键盘 + 触控操作',
             'games.snake.actions.play': '立即游玩',
             'games.snake.actions.source': '查看源码',
+            'games.lights.status': '上线',
+            'games.lights.tags.puzzle': '益智',
+            'games.lights.tags.logic': '逻辑',
+            'games.lights.tags.relax': '舒压',
+            'games.lights.title': '极光灯阵',
+            'games.lights.description':
+              '点亮或熄灭极光灯面，规划每一步点击以清除整片棋盘。轻松上手，却暗藏推理挑战。',
+            'games.lights.meta.grid': '5×5 灯阵',
+            'games.lights.meta.moves': '记录步数',
+            'games.lights.actions.play': '立即游玩',
+            'games.lights.actions.more': '了解玩法',
             'footer.tagline': 'WebGameStation · 静态网页的游戏乐园。',
           },
           en: {
@@ -282,7 +345,7 @@
             'hero.description':
               'WebGameStation curates a collection of instant-play browser games, hosted entirely as static assets on GitHub Pages. Jump in now and enjoy delightful, lightweight fun.',
             'games.heading': 'Featured Games',
-            'games.subheading': 'AI Gomoku and Pixel Snake are ready to play today, with more titles on the way.',
+            'games.subheading': 'AI Gomoku, Pixel Snake, and Aurora Lights are ready to play today, with more titles on the way.',
             'games.ai.status': 'Live',
             'games.ai.tags.strategy': 'Strategy',
             'games.ai.tags.ai': 'AI Battle',
@@ -305,6 +368,17 @@
             'games.snake.meta.controls': 'Keyboard + touch controls',
             'games.snake.actions.play': 'Play now',
             'games.snake.actions.source': 'View source',
+            'games.lights.status': 'Live',
+            'games.lights.tags.puzzle': 'Puzzle',
+            'games.lights.tags.logic': 'Logic',
+            'games.lights.tags.relax': 'Relax',
+            'games.lights.title': 'Aurora Lights',
+            'games.lights.description':
+              'Toggle the aurora grid and plan each move to clear every light. Easy to learn, endlessly replayable for thoughtful puzzlers.',
+            'games.lights.meta.grid': '5×5 grid',
+            'games.lights.meta.moves': 'Tracks your moves',
+            'games.lights.actions.play': 'Play now',
+            'games.lights.actions.more': 'View rules',
             'footer.tagline': 'WebGameStation · Crafted for static web fun.',
           },
         };

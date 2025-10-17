@@ -14,6 +14,7 @@ WebGameStation 是一个部署在 GitHub Pages 上的静态网页游戏平台。
 | ---- | ---- | ------ | -------- |
 | AI 五子棋 | 与智能对手对弈的五子棋游戏，支持多种 AI 策略。 | `games/ai-gobang/` | https://jinchen.space/Web_Gobang/ |
 | 像素贪吃蛇 | 经典贪吃蛇玩法的像素重制版，提供键盘与触控双操控。 | `games/snake/` | ./games/snake/ |
+| 极光灯阵 | 点击翻转灯面并熄灭整局 5×5 灯阵的轻量解谜小游戏。 | `games/lights-out/` | ./games/lights-out/ |
 
 > 📌 说明：AI 五子棋暂以 iframe 形式嵌入外部部署（上方试玩链接）；像素贪吃蛇已完整收录于仓库，可离线游玩。
 
