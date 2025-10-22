@@ -19,7 +19,7 @@
 
 .tower-grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--tower-grid-size, 7), minmax(0, 1fr));
   gap: 0.65rem;
   padding: 1.5rem;
   border-radius: 1.75rem;
@@ -146,17 +146,30 @@
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 0.2rem;
   box-shadow: 0 8px 18px rgba(20, 40, 120, 0.32);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
 .tower-control:active {
   transform: scale(0.95);
   box-shadow: 0 4px 12px rgba(20, 40, 120, 0.4);
+}
+
+.tower-control-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.tower-control-label {
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
 }
 
 .tower-sidebar {
@@ -165,7 +178,8 @@
 }
 
 .tower-scorecard,
-.tower-log-card {
+.tower-log-card,
+.tower-equipment-card {
   padding: 1.75rem;
   border-radius: 1.5rem;
   background: rgba(15, 32, 96, 0.45);
@@ -173,6 +187,30 @@
   box-shadow: inset 0 0 0 1px rgba(124, 168, 255, 0.2);
   display: grid;
   gap: 1rem;
+}
+
+.tower-equipment {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+}
+
+.tower-equipment li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tower-equipment li span:first-child {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.equipment-value {
+  color: #fff;
+  font-weight: 600;
 }
 
 .stats-grid {
@@ -210,6 +248,16 @@
 
 .tower-log li {
   line-height: 1.5;
+}
+
+.npc-lines {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
 }
 
 .tower-restart {
