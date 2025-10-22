@@ -7,13 +7,14 @@ WebGameStation 是一个部署在 GitHub Pages 上的静态网页游戏平台。
 - 🎮 **独立游戏子页**：每个游戏对应一个 `games/<slug>/` 目录，便于维护与扩展。
 - 🚀 **纯静态部署**：只依赖 HTML/CSS/JS 与静态资源，可直接发布到 GitHub Pages。
 - 📱 **移动端友好**：使用响应式布局，兼顾桌面与移动设备体验。
-- 🌐 **中英双语**：首页与最新的贪吃蛇游戏支持实时中英文切换，适配不同语言偏好的玩家。
+- 🌐 **中英双语**：首页与内置小游戏均支持实时中英文切换，适配不同语言偏好的玩家。
 
 ## 当前收录游戏
 | 游戏 | 简介 | 子页面 | 试玩入口 |
 | ---- | ---- | ------ | -------- |
 | AI 五子棋 | 与智能对手对弈的五子棋游戏，支持多种 AI 策略。 | `games/ai-gobang/` | https://jinchen.space/Web_Gobang/ |
 | 像素贪吃蛇 | 经典贪吃蛇玩法的像素重制版，提供键盘与触控双操控。 | `games/snake/` | ./games/snake/ |
+| 魔塔试炼 | 复古魔塔风格的轻量 RPG，规划战斗与道具收集即可开启逃生之门。 | `games/magic-tower/` | ./games/magic-tower/ |
 | 极光灯阵 | 点击翻转灯面并熄灭整局 5×5 灯阵的轻量解谜小游戏。 | `games/lights-out/` | ./games/lights-out/ |
 | 十滴水 | 仅用 10 次加水机会清空 6×6 水滴棋盘的连锁反应益智挑战。 | `games/ten-drops/` | ./games/ten-drops/ |
 
@@ -33,10 +34,22 @@ WebGameStation/
 ├─ games/
 │  ├─ ai-gobang/
 │  │  └─ index.html          # AI 五子棋详情与嵌入页面
-│  └─ snake/
+│  ├─ magic-tower/
+│  │  ├─ index.html          # 魔塔试炼详情 + 游戏主体
+│  │  ├─ magic-tower.css     # 魔塔试炼样式
+│  │  └─ magic-tower.js      # 魔塔试炼游戏逻辑
+│  ├─ snake/
 │     ├─ index.html          # 像素贪吃蛇详情 + 游戏主体
 │     ├─ snake.css           # 贪吃蛇专属样式
 │     └─ snake.js            # 贪吃蛇游戏逻辑
+│  ├─ lights-out/
+│  │  ├─ index.html          # 极光灯阵详情 + 游戏主体
+│  │  ├─ lights-out.css      # 极光灯阵样式
+│  │  └─ lights-out.js       # 极光灯阵逻辑
+│  └─ ten-drops/
+│     ├─ index.html          # 十滴水详情 + 游戏主体
+│     ├─ ten-drops.css       # 十滴水样式
+│     └─ ten-drops.js        # 十滴水逻辑
 ├─ agent.md
 └─ README.md
 ```
