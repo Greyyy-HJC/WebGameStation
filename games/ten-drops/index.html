@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>十滴水 · WebGameStation</title>
+    <meta
+      name="description"
+      content="在 WebGameStation 上挑战十滴水，通过连锁反应清空棋盘的轻度策略益智小游戏。"
+    />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/home.css" />
+    <link rel="stylesheet" href="../../styles/game-detail.css" />
+    <link rel="stylesheet" href="./ten-drops.css" />
+  </head>
+  <body>
+    <div class="game-app">
+      <div class="game-topbar">
+        <a class="crumbs" href="../../" data-i18n-key="crumbs.home">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="16" height="16">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="m15 19-7-7 7-7" />
+          </svg>
+          返回首页
+        </a>
+        <div class="game-top-actions">
+          <button class="lang-toggle" type="button" aria-label="切换中文与英文界面" data-i18n-key="controls.toggle">
+            中 / EN
+          </button>
+          <nav class="site-links" aria-label="作者链接" data-i18n-key="nav.links">
+            <a
+              class="icon-link"
+              href="https://jinchen.space"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="作者主页"
+              data-i18n-key="nav.author"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m-8.5 9h17"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a
+              class="icon-link"
+              href="https://github.com/Greyyy-HJC/WebGameStation"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="GitHub 仓库"
+              data-i18n-key="nav.repo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M15 22v-2.87a3.37 3.37 0 0 0-.94-2.6c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19.5 5.5 5.08 5.08 0 0 0 19.4 2s-1.18-.35-3.9 1.48a13.38 13.38 0 0 0-7 0C5.78 1.65 4.6 2 4.6 2a5.08 5.08 0 0 0-.1 3.5A5.44 5.44 0 0 0 3.5 9.5c0 5.43 3.3 6.62 6.44 7a3.37 3.37 0 0 0-.94 2.6V22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <header class="game-hero">
+        <div class="game-tags">
+          <span class="game-tag" data-i18n-key="hero.tags.puzzle">益智</span>
+          <span class="game-tag" data-i18n-key="hero.tags.strategy">策略</span>
+          <span class="game-tag" data-i18n-key="hero.tags.chain">连锁反应</span>
+        </div>
+        <h1 data-i18n-key="hero.title">十滴水</h1>
+        <p data-i18n-key="hero.description">
+          将有限的水滴倾注在棋盘上，制造绚丽的连锁爆裂。善用 10 次加水机会，让所有水滴回归宁静。
+        </p>
+        <div class="game-meta">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 4h16v16H4z" />
+            </svg>
+            <span data-i18n-key="hero.meta.grid">6×6 水滴棋盘</span>
+          </span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 6v6l4 2m5-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <span data-i18n-key="hero.meta.moves">10 次加水机会</span>
+          </span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M6 7h12M6 12h12m-6 5h6" />
+            </svg>
+            <span data-i18n-key="hero.meta.random">每局随机初始局面</span>
+          </span>
+        </div>
+      </header>
+
+      <section class="game-panel" id="play">
+        <div class="game-panel-header">
+          <h2 data-i18n-key="panel.heading">立即挑战</h2>
+          <p data-i18n-key="panel.description">
+            点击任意水滴格加 1 滴水。格子装满后会爆裂，把水滴传递到上下左右邻格，触发更多连锁反应。将全盘清零即可获胜。
+          </p>
+        </div>
+
+        <div class="drops-layout">
+          <div class="drops-stage">
+            <div id="drops-grid" class="drops-grid" role="grid" aria-label="十滴水棋盘" aria-describedby="drops-status"></div>
+            <p id="drops-status" class="drops-status" data-i18n-key="game.status.ready">点击“开始新局”生成棋盘。</p>
+          </div>
+          <aside class="drops-sidebar">
+            <div class="drops-scorecard">
+              <h3 data-i18n-key="scoreboard.heading">进度追踪</h3>
+              <div class="score-row">
+                <span data-i18n-key="panel.moves">剩余加水</span>
+                <strong id="moves-value">10</strong>
+              </div>
+              <div class="score-row">
+                <span data-i18n-key="panel.cleared">已清空</span>
+                <strong id="cleared-value">0%</strong>
+              </div>
+            </div>
+            <div class="drops-buttons">
+              <button class="button button-primary" type="button" id="new-game-btn" data-i18n-key="controls.new">开始新局</button>
+              <button class="button button-ghost" type="button" id="reset-btn" data-i18n-key="controls.reset">重置当前局</button>
+            </div>
+            <p class="drops-note" data-i18n-key="panel.note">
+              提示：剩余加水次数耗尽仍未清空棋盘则判定失败，随时可点击“开始新局”换一个随机挑战。
+            </p>
+          </aside>
+        </div>
+
+        <div class="drops-rules" id="rules">
+          <h3 data-i18n-key="rules.heading">玩法说明</h3>
+          <ul>
+            <li data-i18n-key="rules.item1">格子可容纳与其相邻方向数量相同的水滴（四向为 4 滴）。超过阈值将爆裂并向四周扩散。</li>
+            <li data-i18n-key="rules.item2">一次爆裂可能触发更多连锁反应，轻点角落与边缘可创造更戏剧化的局面。</li>
+            <li data-i18n-key="rules.item3">清空棋盘即可获胜，使用的加水次数越少代表策略越高效。</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="game-footer">
+        © <span id="game-year"></span>
+        <span data-i18n-key="footer.tagline">WebGameStation · 十滴水。</span>
+      </footer>
+    </div>
+
+    <script src="./ten-drops.js"></script>
+  </body>
+</html>
