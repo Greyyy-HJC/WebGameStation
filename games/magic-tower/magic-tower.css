@@ -14,6 +14,7 @@
 .tower-stage {
   display: grid;
   gap: 1.25rem;
+  position: relative;
 }
 
 .tower-grid {
@@ -90,9 +91,23 @@
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
 }
 
-.tower-cell[data-entity='stairs'] {
+.tower-cell[data-entity='stairs'],
+.tower-cell[data-entity='stairsUp'],
+.tower-cell[data-entity='stairsDown'] {
   background: linear-gradient(145deg, rgba(173, 255, 223, 0.92), rgba(64, 255, 193, 0.72));
   color: rgba(0, 90, 70, 0.92);
+}
+
+.tower-cell[data-entity='shop'] {
+  background: linear-gradient(145deg, rgba(255, 240, 179, 0.92), rgba(255, 207, 114, 0.78));
+  color: rgba(88, 52, 0, 0.85);
+  box-shadow: 0 12px 26px rgba(255, 195, 67, 0.3);
+}
+
+.tower-cell[data-entity='goal'] {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(175, 211, 255, 0.85));
+  color: rgba(48, 70, 130, 0.92);
+  box-shadow: 0 16px 30px rgba(140, 196, 255, 0.4);
 }
 
 .tower-cell:focus-visible {
@@ -199,6 +214,163 @@
 
 .tower-restart {
   justify-self: start;
+}
+
+.tower-dialog-backdrop {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.75rem;
+  background: rgba(5, 10, 28, 0.65);
+  backdrop-filter: blur(6px);
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.tower-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(420px, 90vw);
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+  background: rgba(16, 28, 66, 0.96);
+  box-shadow: 0 28px 60px rgba(10, 14, 40, 0.55);
+  backdrop-filter: blur(18px);
+  display: grid;
+  gap: 1.25rem;
+  z-index: 20;
+}
+
+.tower-dialog.hidden,
+.tower-dialog-backdrop.hidden {
+  display: none;
+}
+
+.tower-dialog-header {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.tower-dialog-sub {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.tower-dialog-body {
+  display: grid;
+  gap: 1rem;
+}
+
+.combat-side {
+  padding: 1rem;
+  border-radius: 1.25rem;
+  background: rgba(20, 40, 98, 0.6);
+  box-shadow: inset 0 0 0 1px rgba(118, 166, 255, 0.22);
+  display: grid;
+  gap: 0.6rem;
+}
+
+.combat-side h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.stat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.stat-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.combat-outcome {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tower-dialog-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.tower-dialog .button {
+  min-width: 120px;
+}
+
+.shop-coins {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.shop-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.shop-item {
+  padding: 1rem;
+  border-radius: 1.2rem;
+  background: rgba(24, 46, 108, 0.6);
+  box-shadow: inset 0 0 0 1px rgba(126, 176, 255, 0.24);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.shop-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.shop-item-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.shop-item-cost {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.shop-item-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.shop-item button {
+  justify-self: end;
+  min-width: 120px;
+}
+
+body.tower-dialog-open {
+  overflow: hidden;
+}
+
+body.tower-dialog-open .tower-grid,
+body.tower-dialog-open .tower-controls,
+body.tower-dialog-open .tower-restart {
+  pointer-events: none;
+  user-select: none;
 }
 
 .tower-rules {
