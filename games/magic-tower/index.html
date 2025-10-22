@@ -123,6 +123,50 @@
                 <button class="tower-control" type="button" data-dir="right" data-i18n-key="controls.right">右</button>
               </div>
             </div>
+            <div class="tower-dialog-backdrop hidden" id="tower-dialog-backdrop"></div>
+            <section class="tower-dialog hidden" id="combat-dialog" role="dialog" aria-modal="true" aria-labelledby="combat-title">
+              <header class="tower-dialog-header">
+                <h3 id="combat-title" data-i18n-key="combat.heading">战斗预览</h3>
+                <p class="tower-dialog-sub" data-i18n-key="combat.prompt">遭遇怪物，是否要发动攻击？</p>
+              </header>
+              <div class="tower-dialog-body">
+                <div class="combat-side">
+                  <h4 data-i18n-key="combat.hero">勇者</h4>
+                  <ul class="stat-list">
+                    <li><span data-i18n-key="stats.hp">生命</span><span id="combat-hero-hp">220</span></li>
+                    <li><span data-i18n-key="stats.attack">攻击</span><span id="combat-hero-atk">28</span></li>
+                    <li><span data-i18n-key="stats.defense">防御</span><span id="combat-hero-def">12</span></li>
+                  </ul>
+                </div>
+                <div class="combat-side">
+                  <h4 id="combat-monster-name">史莱姆</h4>
+                  <ul class="stat-list">
+                    <li><span data-i18n-key="stats.hp">生命</span><span id="combat-monster-hp">60</span></li>
+                    <li><span data-i18n-key="stats.attack">攻击</span><span id="combat-monster-atk">18</span></li>
+                    <li><span data-i18n-key="stats.defense">防御</span><span id="combat-monster-def">6</span></li>
+                    <li><span data-i18n-key="combat.reward">奖励</span><span id="combat-monster-reward">18</span></li>
+                  </ul>
+                </div>
+              </div>
+              <p class="combat-outcome" id="combat-outcome" data-i18n-key="combat.expected">预计损失 0 生命。</p>
+              <div class="tower-dialog-actions">
+                <button class="button" type="button" id="combat-confirm" data-i18n-key="combat.attack">发动攻击</button>
+                <button class="button button-ghost" type="button" id="combat-cancel" data-i18n-key="combat.cancel">暂不战斗</button>
+              </div>
+            </section>
+            <section class="tower-dialog hidden" id="shop-dialog" role="dialog" aria-modal="true" aria-labelledby="shop-title">
+              <header class="tower-dialog-header">
+                <h3 id="shop-title" data-i18n-key="shop.heading">旅人商店</h3>
+                <p class="tower-dialog-sub" data-i18n-key="shop.prompt">使用金币购买补给与强化。</p>
+              </header>
+              <div class="tower-dialog-body">
+                <p class="shop-coins" id="shop-coins" data-i18n-key="shop.coins">当前金币：0</p>
+                <ul class="shop-items" id="shop-items"></ul>
+              </div>
+              <div class="tower-dialog-actions">
+                <button class="button button-ghost" type="button" id="shop-close" data-i18n-key="shop.close">离开商店</button>
+              </div>
+            </section>
           </div>
 
           <aside class="tower-sidebar">
@@ -173,6 +217,7 @@
             <li data-i18n-key="rules.item1">箭头/WASD 控制勇者移动，与怪物同格会自动结算战斗。</li>
             <li data-i18n-key="rules.item2">击败怪物可获得金币，拾取道具提升能力或恢复生命值。</li>
             <li data-i18n-key="rules.item3">需要钥匙才能开启大门，开启后即视为通关本层。</li>
+            <li data-i18n-key="rules.item4">旅人商店可用金币换取回复与强化，合理规划资源。</li>
           </ul>
         </div>
       </section>
