@@ -35,12 +35,12 @@
       'hero.tags.strategy': '策略',
       'hero.tags.retro': '复古冒险',
       'hero.title': '魔塔试炼',
-      'hero.description': '引导勇者穿梭魔塔楼层，合理分配生命与攻击，战胜怪物并开启逃生之门。每一步抉择都决定通关命运。',
-      'hero.meta.grid': '7×7 楼层布局',
+      'hero.description': '引导勇者穿梭扩建后的魔塔迷宫，营救被困的旅人，与神秘 NPC 对话，收集强力装备并击败更危险的守卫者。',
+      'hero.meta.grid': '11×11 多层迷宫',
       'hero.meta.controls': '方向键与触控操作',
-      'hero.meta.goal': '开启大门即可通关',
+      'hero.meta.goal': '解锁塔心守卫的封印',
       'panel.heading': '塔内试炼',
-      'panel.description': '利用方向键或触控按钮在魔塔内移动。战斗前会展示敌我情报，准备充分再出击，并善用商店补给来攀登更高楼层。',
+      'panel.description': '利用方向键或触控按钮在魔塔内移动。提前预览战斗结果，探索牢房与密室，与 NPC 交谈获取线索，并收集装备强化自己。',
       'game.status.ready': '利用方向键或下方按钮开始探索魔塔。',
       'game.status.moved': '向{{direction}}移动。',
       'game.status.wall': '厚重的石墙挡住了去路。',
@@ -56,6 +56,10 @@
       'game.status.floor-down': '顺着阶梯返回了下层。',
       'game.status.shop': '旅人商店开张，挑选需要的补给吧。',
       'game.status.goal': '勇者夺得圣物，试炼圆满结束！',
+      'game.status.prisonLocked': '牢门紧闭，需要钥匙才能救出囚徒。',
+      'game.status.prisonFreed': '{{npc}} 获救，带来了新的情报。',
+      'game.status.npc': '与 {{npc}} 交谈，获得新的情报。',
+      'game.status.equipment': '装备上了 {{item}}。',
       'scoreboard.heading': '冒险状态',
       'stats.hp': '生命',
       'stats.attack': '攻击',
@@ -63,6 +67,11 @@
       'stats.keys': '钥匙',
       'stats.coins': '金币',
       'stats.floor': '楼层',
+      'equipment.heading': '装备栏',
+      'equipment.slot.weapon': '武器',
+      'equipment.slot.armor': '护甲',
+      'equipment.slot.accessory': '饰品',
+      'equipment.empty': '未装备',
       'log.heading': '事件记录',
       'log.start': '勇者踏入魔塔，试炼正式开始。',
       'log.move': '向{{direction}}探索。',
@@ -86,6 +95,12 @@
       'log.shop.cannot': '金币不足，无法购买 {{item}}。',
       'log.goal': '勇者取得魔塔之心，旅程告一段落。',
       'log.reset': '试炼重置，属性恢复初始状态。',
+      'log.prison.locked': '牢门紧锁，还需要钥匙。',
+      'log.prison.freed': '解救了 {{npc}}，对方激动地致谢。',
+      'log.npc.talk': '与 {{npc}} 深谈，获得新的情报。',
+      'log.npc.reward': '{{npc}} 赠予 {{reward}}。',
+      'log.equipment.equip': '装备 {{equipment}}，属性获得提升。',
+      'log.equipment.replace': '更换 {{equipment}}，旧装备被妥善收纳。',
       'controls.up': '上',
       'controls.down': '下',
       'controls.left': '左',
@@ -97,11 +112,38 @@
           title: '方向控制',
         },
       },
+      'npc.heading': '塔中邂逅',
+      'npc.continue': '继续冒险',
+      'npc.role.sage': '塔中贤者',
+      'npc.role.blacksmith': '流浪铁匠',
+      'npc.role.prisoner': '失踪旅人',
+      'npc.reward.coins': '一袋金币',
+      'npc.reward.upgrade': '铁匠的强化',
+      'npc.reward.escape': '旅人的谢礼',
+      'npc.storyteller.name': '流光智者',
+      'npc.storyteller.message': '贤者向你娓娓道来塔心的秘密。',
+      'npc.storyteller.messageRepeat': '贤者再次提醒你留意钥匙与装备。',
+      'npc.storyteller.line1': '“塔心的封印需要勇者与钥匙的力量。”',
+      'npc.storyteller.line2': '“别忘了救下被困的旅人，他们握有通往塔心的线索。”',
+      'npc.storyteller.repeat': '“愿你的装备与意志同样锋利。”',
+      'npc.blacksmith.name': '旅途铁匠',
+      'npc.blacksmith.message': '铁匠为你锻造装备，让战斗更轻松。',
+      'npc.blacksmith.messageRepeat': '铁匠叮嘱你珍惜每一次锻造的机会。',
+      'npc.blacksmith.line1': '“这座塔的怪物比表面看上去更顽强。”',
+      'npc.blacksmith.line2': '“我已为你加固武器与护甲，别忘了试试新装备。”',
+      'npc.blacksmith.repeat': '“若再遇见我，愿能听到你的胜利故事。”',
+      'npc.prisoner.name': '失踪旅人',
+      'npc.prisoner.message': '旅人脱困后把珍贵的钥匙与情报交给你。',
+      'npc.prisoner.line1': '“谢谢你！我在牢中听见守卫谈论顶层的封印。”',
+      'npc.prisoner.line2': '“收下这把钥匙与金币，希望它们能帮到你。”',
+      'npc.prisoner.messageRepeat': '旅人会在塔外为你守望。',
+      'npc.prisoner.repeat': '“祝你一路平安。”',
       'rules.heading': '玩法说明',
       'rules.item1': '箭头/WASD 控制勇者移动，遇到怪物会先展示战斗信息再决定是否出手。',
-      'rules.item2': '击败怪物可获得金币，拾取道具提升能力或恢复生命值。',
-      'rules.item3': '需要钥匙才能开启大门，开启后可前往上层或返回下层。',
-      'rules.item4': '旅人商店可用金币换取回复与强化，合理规划资源。',
+      'rules.item2': '击败怪物可获得金币，拾取道具与装备提升能力或恢复生命值。',
+      'rules.item3': '部分楼层需要钥匙开启大门，亦可用钥匙解锁牢房营救 NPC。',
+      'rules.item4': '旅人商店与 NPC 可提供补给、装备或剧情线索，合理规划资源。',
+      'rules.item5': '装备栏可随时查看当前武器、护甲与饰品，必要时更换更强的装备。',
       'footer.tagline': 'WebGameStation · 魔塔试炼。',
       'direction.up': '上方',
       'direction.down': '下方',
@@ -131,6 +173,10 @@
       'entity.monster.bat': '夜翼蝙蝠',
       'entity.monster.orc': '兽人勇士',
       'entity.monster.skeleton': '骷髅队长',
+      'entity.monster.warlock': '暗影术士',
+      'entity.monster.flame': '炎狱幽灵',
+      'entity.prison': '牢门',
+      'entity.npc': '塔中旅人',
       'combat.heading': '战斗预览',
       'combat.prompt': '遭遇怪物，是否要发动攻击？',
       'combat.hero': '勇者',
@@ -155,6 +201,10 @@
       'shop.item.defenseBoost.desc': '防御力永久提升 8 点。',
       'shop.item.key': '备用钥匙',
       'shop.item.key.desc': '获得一把钥匙，用于开启大门。',
+      'equipment.dawnBlade': '晨曦长刃',
+      'equipment.aegisMantle': '辉耀护甲',
+      'equipment.windCharm': '疾风坠饰',
+      'equipment.solarSigil': '旭日纹章',
     },
     en: {
       'controls.toggle': {
@@ -188,12 +238,12 @@
       'hero.tags.strategy': 'Strategy',
       'hero.tags.retro': 'Retro adventure',
       'hero.title': 'Tower Trial',
-      'hero.description': 'Guide the hero through the tower, balance health and strength, defeat monsters, and unlock the exit. Every decision shapes the run.',
-      'hero.meta.grid': '7×7 floor layout',
+      'hero.description': 'Guide the hero through an expanded labyrinth, rescue trapped travellers, trade words with mysterious NPCs, gather powerful gear, and fell dangerous wardens.',
+      'hero.meta.grid': '11×11 multi-floor maze',
       'hero.meta.controls': 'Keyboard & touch controls',
-      'hero.meta.goal': 'Open the gate to escape',
+      'hero.meta.goal': 'Break the seal guarding the tower heart',
       'panel.heading': 'Trial inside the tower',
-      'panel.description': 'Use the arrow keys or touch buttons to move. Preview battles before striking, gather keys, and invest coins in shops to climb higher.',
+      'panel.description': 'Use the arrow keys or touch buttons to move. Preview battles, search cells and chambers, speak with NPCs for clues, and collect gear to grow stronger.',
       'game.status.ready': 'Use the arrow keys or the on-screen pad to begin exploring.',
       'game.status.moved': 'Moved toward the {{direction}}.',
       'game.status.wall': 'A solid wall blocks the path.',
@@ -209,6 +259,10 @@
       'game.status.floor-down': 'Descended to a lower floor.',
       'game.status.shop': 'A travelling shop appears—time to resupply.',
       'game.status.goal': 'Hero claimed the tower heart. Trial complete!',
+      'game.status.prisonLocked': 'The cell door is sealed—you need a key to help the captive.',
+      'game.status.prisonFreed': '{{npc}} is freed and shares new insights.',
+      'game.status.npc': 'Spoke with {{npc}} and learned more about the tower.',
+      'game.status.equipment': 'Equipped {{item}}.',
       'scoreboard.heading': 'Adventure stats',
       'stats.hp': 'HP',
       'stats.attack': 'Attack',
@@ -216,6 +270,11 @@
       'stats.keys': 'Keys',
       'stats.coins': 'Coins',
       'stats.floor': 'Floor',
+      'equipment.heading': 'Equipment',
+      'equipment.slot.weapon': 'Weapon',
+      'equipment.slot.armor': 'Armor',
+      'equipment.slot.accessory': 'Accessory',
+      'equipment.empty': 'Unequipped',
       'log.heading': 'Event log',
       'log.start': 'The hero steps into the tower and the trial begins.',
       'log.move': 'Explored toward the {{direction}}.',
@@ -239,6 +298,12 @@
       'log.shop.cannot': 'Not enough coins to buy {{item}}.',
       'log.goal': 'Secured the tower heart. The journey ends.',
       'log.reset': 'Trial reset—stats restored to starting values.',
+      'log.prison.locked': 'The cell remains shut—you still need a key.',
+      'log.prison.freed': 'Freed {{npc}}, who offers heartfelt thanks.',
+      'log.npc.talk': 'Spoke with {{npc}} and gained new insight.',
+      'log.npc.reward': '{{npc}} handed over {{reward}}.',
+      'log.equipment.equip': 'Equipped {{equipment}} and grew stronger.',
+      'log.equipment.replace': 'Swapped in {{equipment}}, stowing older gear safely.',
       'controls.up': 'Up',
       'controls.down': 'Down',
       'controls.left': 'Left',
@@ -250,11 +315,38 @@
           title: 'Movement pad',
         },
       },
+      'npc.heading': 'Tower encounter',
+      'npc.continue': 'Return to the journey',
+      'npc.role.sage': 'Tower sage',
+      'npc.role.blacksmith': 'Wandering blacksmith',
+      'npc.role.prisoner': 'Missing traveller',
+      'npc.reward.coins': 'a pouch of coins',
+      'npc.reward.upgrade': 'a forged upgrade',
+      'npc.reward.escape': 'a rescued traveller’s gift',
+      'npc.storyteller.name': 'Sage of Glimmerlight',
+      'npc.storyteller.message': 'The sage shares secrets about the sealed heart.',
+      'npc.storyteller.messageRepeat': 'The sage reminds you to watch your keys and gear.',
+      'npc.storyteller.line1': '“The heart’s seal yields to courage and well-kept keys.”',
+      'npc.storyteller.line2': '“Rescue the prisoners—their clues guide you upward.”',
+      'npc.storyteller.repeat': '“Sharpen both your blade and your resolve.”',
+      'npc.blacksmith.name': 'Travelling smith',
+      'npc.blacksmith.message': 'The smith reinforces your gear for the battles ahead.',
+      'npc.blacksmith.messageRepeat': 'The smith urges you to treasure every upgrade.',
+      'npc.blacksmith.line1': '“These tower fiends endure more than they appear.”',
+      'npc.blacksmith.line2': '“I strengthened your arms and armor—put them to use.”',
+      'npc.blacksmith.repeat': '“Return with tales of victory, friend.”',
+      'npc.prisoner.name': 'Freed traveller',
+      'npc.prisoner.message': 'Grateful travellers repay you with keys and knowledge.',
+      'npc.prisoner.line1': '“Thank you! I overheard guards whisper about the upper seal.”',
+      'npc.prisoner.line2': '“Take these coins and a spare key—may they aid you.”',
+      'npc.prisoner.messageRepeat': 'The traveller promises to watch over you from afar.',
+      'npc.prisoner.repeat': '“Safe journeys, hero.”',
       'rules.heading': 'How to play',
       'rules.item1': 'Move with the arrows or WASD. Entering a monster tile previews the fight before you commit.',
-      'rules.item2': 'Defeating monsters grants coins. Collect items to boost stats or heal.',
-      'rules.item3': 'A key is required to open locked gates and reach new floors.',
-      'rules.item4': 'Travelling shops let you trade coins for healing and upgrades.',
+      'rules.item2': 'Defeating monsters grants coins. Collect items and equipment to bolster stats or heal.',
+      'rules.item3': 'Some floors lock the ascent behind gates or cells—carry keys to advance or rescue NPCs.',
+      'rules.item4': 'Travelling shops and NPCs provide supplies, gear, and story clues—plan your spending wisely.',
+      'rules.item5': 'Use the equipment panel to review your weapon, armor, and accessory, swapping to stronger finds.',
       'footer.tagline': 'WebGameStation · Tower Trial.',
       'direction.up': 'north',
       'direction.down': 'south',
@@ -284,6 +376,10 @@
       'entity.monster.bat': 'night bat',
       'entity.monster.orc': 'orc warrior',
       'entity.monster.skeleton': 'skeleton captain',
+      'entity.monster.warlock': 'shadow warlock',
+      'entity.monster.flame': 'ember wraith',
+      'entity.prison': 'prison door',
+      'entity.npc': 'tower denizen',
       'combat.heading': 'Battle preview',
       'combat.prompt': 'A monster blocks the way. Attack?',
       'combat.hero': 'Hero',
@@ -308,6 +404,10 @@
       'shop.item.defenseBoost.desc': 'Permanently gain +8 defense.',
       'shop.item.key': 'Spare key',
       'shop.item.key.desc': 'Adds one key to your pack.',
+      'equipment.dawnBlade': 'Dawnblade',
+      'equipment.aegisMantle': 'Aegis Mantle',
+      'equipment.windCharm': 'Windwhisper Charm',
+      'equipment.solarSigil': 'Solar Sigil',
     },
   };
 
@@ -316,37 +416,81 @@
     {
       level: 1,
       layout: [
-        ['#', '#', '#', '#', '#', '#', '#'],
-        ['#', 'H', '.', 'M', '.', 'D', '#'],
-        ['#', '.', '#', '.', '#', '.', '#'],
-        ['#', 'K', '.', 'A', 'M', 'T', '#'],
-        ['#', '.', '#', '.', '#', '.', '#'],
-        ['#', 'C', 'B', '.', 'P', 'U', '#'],
-        ['#', '#', '#', '#', '#', '#', '#'],
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
+        ['#', 'H', '.', '.', '.', 'M', '.', '.', '.', 'U', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'K', '.', '.', '.', 'M', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'P', '.', 'T', '.', 'C', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'R', '.', 'A', '.', 'G', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'N', '.', '.', '.', 'V', '.', '.', '#'],
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
       ],
     },
     {
       level: 2,
       layout: [
-        ['#', '#', '#', '#', '#', '#', '#'],
-        ['#', 'S', '.', 'V', '.', 'G', '#'],
-        ['#', '.', '#', '.', '#', '.', '#'],
-        ['#', 'K', '.', 'O', '.', 'T', '#'],
-        ['#', '.', '#', '.', '#', '.', '#'],
-        ['#', 'P', '.', 'C', '.', 'U', '#'],
-        ['#', '#', '#', '#', '#', '#', '#'],
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
+        ['#', 'S', '.', '.', 'M', '.', '.', '#', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'C', '.', '.', 'W', '.', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'L', '.', '.', 'G', '.', '.', 'D', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'P', '.', 'T', '.', 'C', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'K', '.', '.', '.', 'O', '.', '.', '#'],
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
       ],
     },
     {
       level: 3,
       layout: [
-        ['#', '#', '#', '#', '#', '#', '#'],
-        ['#', 'S', '.', 'G', '.', 'B', '#'],
-        ['#', '.', '#', '.', '#', '.', '#'],
-        ['#', 'T', '.', 'X', '.', 'D', '#'],
-        ['#', '.', '#', '.', '#', '.', '#'],
-        ['#', 'P', 'A', '.', 'C', '.', '#'],
-        ['#', '#', '#', '#', '#', '#', '#'],
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
+        ['#', 'S', '.', '.', 'V', '.', '.', '#', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'Y', '.', '.', 'B', '.', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'Q', '.', '.', 'P', '.', '.', 'U', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'C', '.', '.', 'M', '.', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'W', '.', '.', 'K', '.', '.', '.', '#'],
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
+      ],
+    },
+    {
+      level: 4,
+      layout: [
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
+        ['#', 'S', '.', '.', 'M', '.', '.', '#', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'C', '.', '.', 'T', '.', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'Z', '.', '.', 'X', '.', '.', 'D', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'P', '.', '.', 'L', '.', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'K', '.', '.', '.', 'O', '.', '.', '#'],
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
+      ],
+    },
+    {
+      level: 5,
+      layout: [
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
+        ['#', 'S', '.', '.', 'W', '.', '.', '#', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'C', '.', '.', 'F', '.', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'J', '.', '.', 'G', '.', '.', 'D', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'P', '.', '.', 'B', '.', '.', '.', '#'],
+        ['#', '.', '#', '.', '#', '.', '#', '.', '#', '.', '#'],
+        ['#', '.', '.', 'N', '.', '.', 'M', '.', '.', '.', '#'],
+        ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
       ],
     },
   ];
@@ -392,6 +536,22 @@
       icon: '💀',
       nameKey: 'entity.monster.skeleton',
     },
+    warlock: {
+      hp: 160,
+      attack: 44,
+      defense: 22,
+      reward: 72,
+      icon: '🪄',
+      nameKey: 'entity.monster.warlock',
+    },
+    flame: {
+      hp: 220,
+      attack: 54,
+      defense: 28,
+      reward: 92,
+      icon: '🔥',
+      nameKey: 'entity.monster.flame',
+    },
   };
 
   const shopInventory = {
@@ -435,6 +595,82 @@
     ],
   };
 
+  const equipmentItems = {
+    dawnBlade: {
+      id: 'dawnBlade',
+      nameKey: 'equipment.dawnBlade',
+      slot: 'weapon',
+      icon: '⚔️',
+      bonus: { attack: 10 },
+    },
+    aegisMantle: {
+      id: 'aegisMantle',
+      nameKey: 'equipment.aegisMantle',
+      slot: 'armor',
+      icon: '🛡️',
+      bonus: { defense: 12 },
+    },
+    windCharm: {
+      id: 'windCharm',
+      nameKey: 'equipment.windCharm',
+      slot: 'accessory',
+      icon: '💨',
+      bonus: { attack: 4, defense: 4 },
+    },
+    solarSigil: {
+      id: 'solarSigil',
+      nameKey: 'equipment.solarSigil',
+      slot: 'accessory',
+      icon: '🌞',
+      bonus: { attack: 8, defense: 8 },
+    },
+  };
+
+  const npcProfiles = {
+    storyteller: {
+      id: 'storyteller',
+      nameKey: 'npc.storyteller.name',
+      roleKey: 'npc.role.sage',
+      icon: '🧙',
+      lines: {
+        default: ['npc.storyteller.line1', 'npc.storyteller.line2'],
+        repeat: ['npc.storyteller.repeat'],
+      },
+      message: {
+        default: 'npc.storyteller.message',
+        repeat: 'npc.storyteller.messageRepeat',
+      },
+    },
+    blacksmith: {
+      id: 'blacksmith',
+      nameKey: 'npc.blacksmith.name',
+      roleKey: 'npc.role.blacksmith',
+      icon: '⚒️',
+      lines: {
+        default: ['npc.blacksmith.line1', 'npc.blacksmith.line2'],
+        repeat: ['npc.blacksmith.repeat'],
+      },
+      message: {
+        default: 'npc.blacksmith.message',
+        repeat: 'npc.blacksmith.messageRepeat',
+      },
+    },
+    prisoner: {
+      id: 'prisoner',
+      nameKey: 'npc.prisoner.name',
+      roleKey: 'npc.role.prisoner',
+      icon: '🧍',
+      lines: {
+        prison: ['npc.prisoner.line1', 'npc.prisoner.line2'],
+        repeat: ['npc.prisoner.repeat'],
+      },
+      message: {
+        prison: 'npc.prisoner.message',
+        repeat: 'npc.prisoner.messageRepeat',
+      },
+    },
+  };
+
   const entityIcons = {
     empty: '',
     wall: '⬛',
@@ -449,6 +685,9 @@
     coin: '💰',
     shop: '🏪',
     goal: '💎',
+    prison: '🔒',
+    npc: '🧙',
+    equipment: '🎖️',
     hero: '🧝',
   };
 
@@ -507,6 +746,17 @@
   const shopItemsEl = document.getElementById('shop-items');
   const shopCoinsEl = document.getElementById('shop-coins');
   const shopCloseBtn = document.getElementById('shop-close');
+  const equipmentEls = {
+    weapon: document.getElementById('equipment-weapon'),
+    armor: document.getElementById('equipment-armor'),
+    accessory: document.getElementById('equipment-accessory'),
+  };
+  const npcDialog = document.getElementById('npc-dialog');
+  const npcTitleEl = document.getElementById('npc-title');
+  const npcRoleEl = document.getElementById('npc-role');
+  const npcMessageEl = document.getElementById('npc-message');
+  const npcLinesEl = document.getElementById('npc-lines');
+  const npcContinueBtn = document.getElementById('npc-continue');
 
   let currentLang = 'zh';
   let board = [];
@@ -523,14 +773,21 @@
   let activeDialog = null;
   let activeShopId = null;
   let interactionLocked = false;
+  let npcStates = {};
+  let activeNpc = null;
 
   const baseHero = {
-    hp: 220,
-    attack: 28,
-    defense: 12,
+    hp: 260,
+    attack: 32,
+    defense: 14,
     keys: 0,
     coins: 0,
     floor: 1,
+    equipment: {
+      weapon: null,
+      armor: null,
+      accessory: null,
+    },
   };
 
   function format(template, params = {}) {
@@ -581,6 +838,10 @@
         return { type: 'monster', id: 'orc' };
       case 'X':
         return { type: 'monster', id: 'skeleton' };
+      case 'W':
+        return { type: 'monster', id: 'warlock' };
+      case 'F':
+        return { type: 'monster', id: 'flame' };
       case 'D':
         return { type: 'door' };
       case 'K':
@@ -593,12 +854,26 @@
         return { type: 'defense', value: 6 };
       case 'C':
         return { type: 'coin', value: 30 };
+      case 'R':
+        return { type: 'equipment', id: 'dawnBlade' };
+      case 'Y':
+        return { type: 'equipment', id: 'aegisMantle' };
+      case 'Z':
+        return { type: 'equipment', id: 'windCharm' };
+      case 'J':
+        return { type: 'equipment', id: 'solarSigil' };
       case 'U':
         return { type: 'stairsUp' };
       case 'S':
         return { type: 'stairsDown' };
       case 'T':
         return { type: 'shop', id: 'travelling' };
+      case 'L':
+        return { type: 'prison', id: 'prisoner', opened: false };
+      case 'N':
+        return { type: 'npc', id: 'storyteller' };
+      case 'Q':
+        return { type: 'npc', id: 'blacksmith' };
       case 'E':
         return { type: 'goal' };
       default:
@@ -648,12 +923,16 @@
     if (shopDialog) {
       shopDialog.classList.add('hidden');
     }
+    if (npcDialog) {
+      npcDialog.classList.add('hidden');
+    }
     if (dialogBackdrop) {
       dialogBackdrop.classList.add('hidden');
     }
     activeDialog = null;
     pendingCombat = null;
     activeShopId = null;
+    activeNpc = null;
     unlockInteraction();
   }
 
@@ -701,7 +980,7 @@
   function resetBoard() {
     createFloorStates();
     closeAllDialogs();
-    hero = { ...baseHero };
+    hero = { ...baseHero, equipment: { ...baseHero.equipment } };
     currentFloorIndex = 0;
     board = floorStates[currentFloorIndex].grid;
     const spawn =
@@ -718,6 +997,8 @@
     pendingCombat = null;
     activeDialog = null;
     activeShopId = null;
+    npcStates = {};
+    activeNpc = null;
     hero.floor = floors[currentFloorIndex].level;
     pushLog('log.start');
     updateStats();
@@ -736,6 +1017,24 @@
     statEls.keys.textContent = hero.keys;
     statEls.coins.textContent = hero.coins;
     statEls.floor.textContent = hero.floor;
+    updateEquipmentPanel();
+  }
+
+  function updateEquipmentPanel() {
+    if (!hero) {
+      return;
+    }
+    Object.entries(equipmentEls).forEach(([slot, el]) => {
+      if (!el) {
+        return;
+      }
+      const equipped = hero.equipment ? hero.equipment[slot] : null;
+      if (equipped && equipped.nameKey) {
+        el.textContent = translate(equipped.nameKey);
+      } else {
+        el.textContent = translate('equipment.empty');
+      }
+    });
   }
 
   function renderBoard() {
@@ -743,6 +1042,10 @@
       return;
     }
     gridEl.innerHTML = '';
+
+    if (board[0]) {
+      gridEl.style.setProperty('--tower-grid-size', board[0].length);
+    }
 
     board.forEach((row, rowIndex) => {
       row.forEach((cell, colIndex) => {
@@ -761,10 +1064,26 @@
           cellEl.textContent = monster ? monster.icon : '👹';
           const labelKey = monster ? monster.nameKey : 'entity.monster.guard';
           cellEl.setAttribute('aria-label', translate(labelKey));
+        } else if (cell.type === 'equipment') {
+          const item = equipmentItems[cell.id];
+          const icon = item ? item.icon : entityIcons.equipment || '';
+          const labelKey = item ? item.nameKey : 'equipment.empty';
+          cellEl.textContent = icon;
+          cellEl.setAttribute('aria-label', translate(labelKey));
+        } else if (cell.type === 'npc') {
+          const npc = npcProfiles[cell.id];
+          const icon = npc ? npc.icon : entityIcons.npc || '';
+          const labelKey = npc ? npc.nameKey : 'entity.npc';
+          cellEl.textContent = icon;
+          cellEl.setAttribute('aria-label', translate(labelKey));
+        } else if (cell.type === 'prison') {
+          const npc = npcProfiles[cell.id];
+          cellEl.textContent = entityIcons.prison || '🔒';
+          cellEl.setAttribute('aria-label', translate(npc ? npc.nameKey : 'entity.prison'));
         } else {
           const icon = entityIcons[cell.type] || '';
-          cellEl.textContent = icon;
           const entityKey = cell.type === 'empty' ? 'entity.empty' : `entity.${cell.type}`;
+          cellEl.textContent = icon;
           cellEl.setAttribute('aria-label', translate(entityKey));
         }
         gridEl.appendChild(cellEl);
@@ -805,6 +1124,12 @@
         resolved.monster = translate(value);
       } else if (key === 'item') {
         resolved.item = translate(value);
+      } else if (key === 'npc') {
+        resolved.npc = translate(value);
+      } else if (key === 'reward') {
+        resolved.reward = translate(value);
+      } else if (key === 'equipment') {
+        resolved.equipment = translate(value);
       } else {
         resolved[key] = value;
       }
@@ -893,6 +1218,15 @@
         moveHero(nextRow, nextCol);
         board[nextRow][nextCol] = makeCell('.');
         return;
+      case 'equipment':
+        equipItem(target, nextRow, nextCol);
+        return;
+      case 'npc':
+        encounterNpc(target.id, { row: nextRow, col: nextCol, removeTile: true, context: 'default' });
+        return;
+      case 'prison':
+        interactPrison(target, nextRow, nextCol);
+        return;
       case 'empty':
         moveHero(nextRow, nextCol);
         statusKey = 'game.status.moved';
@@ -913,6 +1247,173 @@
     statusKey = 'game.status.pickup';
     statusParams = { item: itemKey };
     updateStatusMessage();
+  }
+
+  function applyEquipmentBonuses(item, multiplier = 1) {
+    if (!item || !item.bonus) {
+      return;
+    }
+    const { attack = 0, defense = 0 } = item.bonus;
+    hero.attack += attack * multiplier;
+    hero.defense += defense * multiplier;
+  }
+
+  function equipItem(cell, row, col) {
+    const item = equipmentItems[cell.id];
+    if (!item || !hero.equipment) {
+      moveHero(row, col);
+      statusKey = 'game.status.moved';
+      statusParams = {};
+      updateStatusMessage();
+      return;
+    }
+
+    const slot = item.slot;
+    const previous = hero.equipment[slot];
+    if (previous) {
+      applyEquipmentBonuses(previous, -1);
+    }
+
+    hero.equipment[slot] = { ...item };
+    applyEquipmentBonuses(item, 1);
+    board[row][col] = makeCell('.');
+    moveHero(row, col);
+    const logKey = previous ? 'log.equipment.replace' : 'log.equipment.equip';
+    pushLog(logKey, { equipment: item.nameKey });
+    statusKey = 'game.status.equipment';
+    statusParams = { item: item.nameKey };
+    updateStats();
+    updateStatusMessage();
+  }
+
+  function applyNpcReward(npcId, context) {
+    const profile = npcProfiles[npcId];
+    if (!profile) {
+      return;
+    }
+    switch (npcId) {
+      case 'storyteller':
+        hero.coins += 35;
+        pushLog('log.npc.reward', { npc: profile.nameKey, reward: 'npc.reward.coins' });
+        break;
+      case 'blacksmith':
+        hero.attack += 6;
+        hero.defense += 6;
+        pushLog('log.npc.reward', { npc: profile.nameKey, reward: 'npc.reward.upgrade' });
+        break;
+      case 'prisoner':
+        hero.keys += 1;
+        hero.coins += 40;
+        pushLog('log.npc.reward', { npc: profile.nameKey, reward: 'npc.reward.escape' });
+        pushLog('log.pickup.key', { count: hero.keys });
+        break;
+      default:
+        break;
+    }
+  }
+
+  function renderNpcDialog() {
+    if (!activeNpc || !npcDialog) {
+      return;
+    }
+    const profile = npcProfiles[activeNpc.id];
+    if (!profile) {
+      return;
+    }
+
+    const context = profile.lines?.[activeNpc.context] ? activeNpc.context : 'default';
+    if (npcTitleEl) {
+      npcTitleEl.textContent = translate(profile.nameKey);
+    }
+    if (npcRoleEl) {
+      npcRoleEl.textContent = translate(profile.roleKey);
+    }
+    if (npcMessageEl) {
+      const messageKey = profile.message?.[context] || profile.message?.default;
+      npcMessageEl.textContent = messageKey ? translate(messageKey) : '';
+    }
+    if (npcLinesEl) {
+      npcLinesEl.innerHTML = '';
+      const lines = profile.lines?.[context] || profile.lines?.default || [];
+      lines.forEach((lineKey) => {
+        const li = document.createElement('li');
+        li.textContent = translate(lineKey);
+        npcLinesEl.appendChild(li);
+      });
+    }
+  }
+
+  function closeNpcDialog() {
+    if (!npcDialog) {
+      return;
+    }
+    hideDialog(npcDialog);
+    activeNpc = null;
+  }
+
+  function encounterNpc(npcId, options = {}) {
+    const { row, col, removeTile = false, context = 'default' } = options;
+    const profile = npcProfiles[npcId];
+
+    if (typeof row === 'number' && typeof col === 'number') {
+      moveHero(row, col);
+      if (removeTile) {
+        board[row][col] = makeCell('.');
+      }
+    }
+
+    if (!profile) {
+      statusKey = 'game.status.moved';
+      statusParams = {};
+      updateStatusMessage();
+      return;
+    }
+
+    const state = npcStates[npcId] || { talked: false };
+    const firstEncounter = !state.talked;
+    const dialogContext = firstEncounter ? (context === 'prison' ? 'prison' : 'default') : 'repeat';
+
+    if (firstEncounter) {
+      applyNpcReward(npcId, context);
+      state.talked = true;
+      npcStates[npcId] = state;
+      updateStats();
+      pushLog('log.npc.talk', { npc: profile.nameKey });
+    }
+
+    activeNpc = { id: npcId, context: dialogContext };
+    renderNpcDialog();
+    showDialog(npcDialog);
+
+    statusKey = context === 'prison' && firstEncounter ? 'game.status.prisonFreed' : 'game.status.npc';
+    statusParams = { npc: profile.nameKey };
+    updateStatusMessage();
+  }
+
+  function interactPrison(cell, row, col) {
+    const npcId = cell.id || 'prisoner';
+    const profile = npcProfiles[npcId];
+
+    if (cell.opened) {
+      encounterNpc(npcId, { row, col, removeTile: true, context: 'repeat' });
+      return;
+    }
+
+    if (hero.keys <= 0) {
+      statusKey = 'game.status.prisonLocked';
+      statusParams = {};
+      pushLog('log.prison.locked');
+      updateStatusMessage();
+      return;
+    }
+
+    hero.keys -= 1;
+    cell.opened = true;
+    board[row][col] = makeCell('.');
+    pushLog('log.prison.freed', { npc: profile ? profile.nameKey : 'entity.npc' });
+    moveHero(row, col);
+    encounterNpc(npcId, { context: 'prison' });
+    updateStats();
   }
 
   function moveHero(row, col) {
@@ -1286,6 +1787,8 @@
           }
         } else if (activeDialog === shopDialog) {
           leaveShop();
+        } else if (activeDialog === npcDialog) {
+          closeNpcDialog();
         }
       }
       return;
@@ -1357,6 +1860,10 @@
     renderBoard();
     renderLog();
     updateStatusMessage();
+
+    if (activeNpc) {
+      renderNpcDialog();
+    }
 
     if (pendingCombat && activeDialog === combatDialog) {
       const monster = monsters[pendingCombat.monsterId];
@@ -1434,6 +1941,8 @@
           combatCancelBtn.click();
         } else if (activeDialog === shopDialog) {
           leaveShop();
+        } else if (activeDialog === npcDialog) {
+          closeNpcDialog();
         }
       });
     }
@@ -1449,6 +1958,10 @@
 
     if (restartBtn) {
       restartBtn.addEventListener('click', restartGame);
+    }
+
+    if (npcContinueBtn) {
+      npcContinueBtn.addEventListener('click', closeNpcDialog);
     }
   }
 

@@ -77,14 +77,14 @@
         </div>
         <h1 data-i18n-key="hero.title">魔塔试炼</h1>
         <p data-i18n-key="hero.description">
-          引导勇者穿梭魔塔楼层，合理分配生命与攻击，战胜怪物并开启逃生之门。每一步抉择都决定通关命运。
+          引导勇者穿梭扩建后的魔塔迷宫，营救被困的旅人，与神秘 NPC 对话，收集强力装备并击败更危险的守卫者。
         </p>
         <div class="game-meta">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 4h16v16H4z" />
             </svg>
-            <span data-i18n-key="hero.meta.grid">7×7 楼层布局</span>
+            <span data-i18n-key="hero.meta.grid">11×11 多层迷宫</span>
           </span>
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -96,7 +96,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9 9l3 3 7-7" />
             </svg>
-            <span data-i18n-key="hero.meta.goal">开启大门即可通关</span>
+            <span data-i18n-key="hero.meta.goal">解锁塔心守卫的封印</span>
           </span>
         </div>
       </header>
@@ -105,7 +105,7 @@
         <div class="game-panel-header">
           <h2 data-i18n-key="panel.heading">塔内试炼</h2>
           <p data-i18n-key="panel.description">
-            利用方向键或触控按钮在魔塔内移动。与怪物战斗前评估血量与属性，收集钥匙开启大门，迈向更高的楼层。
+            利用方向键或触控按钮在魔塔内移动。提前预览战斗结果，探索牢房与密室，与 NPC 交谈获取线索，并收集装备强化自己。
           </p>
         </div>
 
@@ -116,11 +116,23 @@
               利用方向键或下方按钮开始探索魔塔。
             </p>
             <div class="tower-controls" aria-label="方向控制" data-i18n-key="controls.pad">
-              <button class="tower-control" type="button" data-dir="up" data-i18n-key="controls.up">上</button>
+              <button class="tower-control" type="button" data-dir="up" data-icon="↑">
+                <span class="tower-control-icon" aria-hidden="true">↑</span>
+                <span class="tower-control-label" data-i18n-key="controls.up">上</span>
+              </button>
               <div class="tower-control-middle">
-                <button class="tower-control" type="button" data-dir="left" data-i18n-key="controls.left">左</button>
-                <button class="tower-control" type="button" data-dir="down" data-i18n-key="controls.down">下</button>
-                <button class="tower-control" type="button" data-dir="right" data-i18n-key="controls.right">右</button>
+                <button class="tower-control" type="button" data-dir="left" data-icon="←">
+                  <span class="tower-control-icon" aria-hidden="true">←</span>
+                  <span class="tower-control-label" data-i18n-key="controls.left">左</span>
+                </button>
+                <button class="tower-control" type="button" data-dir="down" data-icon="↓">
+                  <span class="tower-control-icon" aria-hidden="true">↓</span>
+                  <span class="tower-control-label" data-i18n-key="controls.down">下</span>
+                </button>
+                <button class="tower-control" type="button" data-dir="right" data-icon="→">
+                  <span class="tower-control-icon" aria-hidden="true">→</span>
+                  <span class="tower-control-label" data-i18n-key="controls.right">右</span>
+                </button>
               </div>
             </div>
             <div class="tower-dialog-backdrop hidden" id="tower-dialog-backdrop"></div>
@@ -200,6 +212,24 @@
               </dl>
             </div>
 
+            <div class="tower-equipment-card">
+              <h3 data-i18n-key="equipment.heading">装备栏</h3>
+              <ul class="tower-equipment" aria-live="polite">
+                <li>
+                  <span data-i18n-key="equipment.slot.weapon">武器</span>
+                  <span id="equipment-weapon" class="equipment-value">-</span>
+                </li>
+                <li>
+                  <span data-i18n-key="equipment.slot.armor">护甲</span>
+                  <span id="equipment-armor" class="equipment-value">-</span>
+                </li>
+                <li>
+                  <span data-i18n-key="equipment.slot.accessory">饰品</span>
+                  <span id="equipment-accessory" class="equipment-value">-</span>
+                </li>
+              </ul>
+            </div>
+
             <div class="tower-log-card">
               <h3 data-i18n-key="log.heading">事件记录</h3>
               <ul id="tower-log" class="tower-log" aria-live="polite"></ul>
@@ -214,10 +244,11 @@
         <div class="tower-rules" id="rules">
           <h3 data-i18n-key="rules.heading">玩法说明</h3>
           <ul>
-            <li data-i18n-key="rules.item1">箭头/WASD 控制勇者移动，与怪物同格会自动结算战斗。</li>
-            <li data-i18n-key="rules.item2">击败怪物可获得金币，拾取道具提升能力或恢复生命值。</li>
-            <li data-i18n-key="rules.item3">需要钥匙才能开启大门，开启后即视为通关本层。</li>
-            <li data-i18n-key="rules.item4">旅人商店可用金币换取回复与强化，合理规划资源。</li>
+            <li data-i18n-key="rules.item1">箭头/WASD 控制勇者移动，遇到怪物会先展示战斗信息再决定是否出手。</li>
+            <li data-i18n-key="rules.item2">击败怪物可获得金币，拾取道具与装备提升能力或恢复生命值。</li>
+            <li data-i18n-key="rules.item3">部分楼层需要钥匙开启大门，亦可用钥匙解锁牢房营救 NPC。</li>
+            <li data-i18n-key="rules.item4">旅人商店与 NPC 可提供补给、装备或剧情线索，合理规划资源。</li>
+            <li data-i18n-key="rules.item5">装备栏可随时查看当前武器、护甲与饰品，必要时更换更强的装备。</li>
           </ul>
         </div>
       </section>
@@ -227,6 +258,20 @@
         <span data-i18n-key="footer.tagline">WebGameStation · 魔塔试炼。</span>
       </footer>
     </div>
+
+    <section class="tower-dialog hidden" id="npc-dialog" role="dialog" aria-modal="true" aria-labelledby="npc-title">
+      <div class="tower-dialog-header">
+        <h3 id="npc-title" data-i18n-key="npc.heading">塔中邂逅</h3>
+        <p class="tower-dialog-sub" id="npc-role">NPC</p>
+      </div>
+      <div class="tower-dialog-body">
+        <p id="npc-message">……</p>
+        <ul id="npc-lines" class="npc-lines"></ul>
+      </div>
+      <div class="tower-dialog-actions">
+        <button class="button" type="button" id="npc-continue" data-i18n-key="npc.continue">继续冒险</button>
+      </div>
+    </section>
 
     <script src="./magic-tower.js"></script>
   </body>
